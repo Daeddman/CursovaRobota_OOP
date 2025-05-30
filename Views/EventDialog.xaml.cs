@@ -21,16 +21,59 @@ namespace CursovaRobota.Views
 
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
-            CalendarRepository.DeleteUserEvent(_event);
+            if (_event != null)
+            {
+                CalendarRepository.DeleteUserEvent(_event.Id); // ← передаємо Guid
+            }
 
             DialogResult = true;
             Close();
         }
 
-        private void Close_Click(object sender, RoutedEventArgs e)
+        private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = false;
-            Close();
+            var res = WindowInputDialog.Show(      // той самий базовий діалог
+                "Змініть дані події",
+                "Редагування події");
+
+            if (string.IsNullOrWhiteSpace(res.Title))
+                return;
+
+            /* оновити текст */
+            _event.Title = res.Title;
+            _event.Description = res.Description;
+
+            /* оновити дату й час */
+            _event.Start = _event.Start.Date + res.From;
+            _event.End = _event.Start.Date + res.To;
+
+            /* якщо користувач задав повторюваність */
+            if (res.Freq != Frequency.None)
+            {
+                var rev = new RecurringEvent
+                {
+                    Id = _event.Id,
+                    Title = _event.Title,
+                    Description = _event.Description,
+                    Start = _event.Start,
+                    End = _event.End,
+                    Rule = new RecurrenceRule
+                    {
+                        Freq = res.Freq,
+                        Interval = res.Interval
+                    }
+                };
+                CalendarRepository.AddOrUpdateUserEvent(rev);
+            }
+            else
+            {
+                CalendarRepository.AddOrUpdateUserEvent(_event);
+            }
+
+            /* оновити binding */
+            DataContext = null;
+            DataContext = _event;
         }
+
     }
 }

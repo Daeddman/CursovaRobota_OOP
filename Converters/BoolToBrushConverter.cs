@@ -1,24 +1,22 @@
 ﻿using System;
 using System.Globalization;
+using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace CursovaRobota.Converters
+namespace CursovaRobota.Helpers
 {
-    public sealed class BoolToBrushConverter : IValueConverter
+    public class BoolToBrushConverter : IValueConverter
     {
-        public Brush TrueBrush { get; set; }
-        public Brush FalseBrush { get; set; }
-
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            bool isTrue = value is bool && (bool)value;
-            return isTrue ? TrueBrush : FalseBrush;
+            bool b = value is bool vb && vb;
+            return b
+               ? (Brush)Application.Current.Resources["PrimaryBrush"]
+               : (Brush)Application.Current.Resources["OnSurfaceVariantBrush"];
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            return Binding.DoNothing;
-        }
+            => throw new NotSupportedException();
     }
 }

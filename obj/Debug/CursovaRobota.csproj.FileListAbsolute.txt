@@ -55,3 +55,7 @@ C:\Users\oleks\Desktop\CursovaRobota\obj\Debug\Views\NotificationDialog.baml
 C:\Users\oleks\Desktop\CursovaRobota\obj\Debug\Views\NotificationDialog.g.cs
 C:\Users\oleks\Desktop\CursovaRobota\obj\Debug\Views\HoldiayDialog.baml
 C:\Users\oleks\Desktop\CursovaRobota\obj\Debug\Views\HoldiayDialog.g.cs
+C:\Users\oleks\Desktop\CursovaRobota\bin\Debug\Newtonsoft.Json.dll
+C:\Users\oleks\Desktop\CursovaRobota\bin\Debug\Newtonsoft.Json.xml
+C:\Users\oleks\Desktop\CursovaRobota\obj\Debug\Views\DatePickerDialog.baml
+C:\Users\oleks\Desktop\CursovaRobota\obj\Debug\Views\DatePickerDialog.g.cs

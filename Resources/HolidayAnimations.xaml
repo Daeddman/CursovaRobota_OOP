@@ -1,71 +1,97 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+                    
+    <!-- ==========  NO ANIMATION (Placeholder)  ========== -->
+    <Storyboard x:Key="No_anim" x:Shared="False"
+                FillBehavior="Stop"/>
 
     <!-- ==========  NEW YEAR  ========== -->
-    <Storyboard x:Key="newyear_anim" x:Shared="False">
+    <Storyboard x:Key="newyear_anim" x:Shared="False"
+                FillBehavior="Stop">
         <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Window.Background).(SolidColorBrush.Color)"
                                       Duration="0:0:2">
             <DiscreteColorKeyFrame KeyTime="0:0:0.0" Value="#FF4FC3F7"/>
-            <DiscreteColorKeyFrame KeyTime="0:0:0.3" Value="#FFFFD54F"/>
-            <DiscreteColorKeyFrame KeyTime="0:0:0.6" Value="#FFE57373"/>
-            <DiscreteColorKeyFrame KeyTime="0:0:0.9" Value="#FF81C784"/>
-            <DiscreteColorKeyFrame KeyTime="0:0:1.2" Value="#FFBA68C8"/>
-            <DiscreteColorKeyFrame KeyTime="0:0:1.5" Value="#FFFFFFFF"/>
+            <DiscreteColorKeyFrame KeyTime="0:0:0.5" Value="#FFFFD54F"/>
+            <DiscreteColorKeyFrame KeyTime="0:0:1.0" Value="#FFE57373"/>
+            <DiscreteColorKeyFrame KeyTime="0:0:1.5" Value="#FF81C784"/>
+            <DiscreteColorKeyFrame KeyTime="0:0:2.0" Value="#FF4FC3F7"/>
         </ColorAnimationUsingKeyFrames>
-        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
-                         From="1" To="1.05" Duration="0:0:0.15" AutoReverse="True" RepeatBehavior="6x"/>
-        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
-                         From="1" To="1.05" Duration="0:0:0.15" AutoReverse="True" RepeatBehavior="6x"/>
     </Storyboard>
 
     <!-- ==========  VALENTINE’S DAY  ========== -->
-    <Storyboard x:Key="valentine_anim" x:Shared="False">
+    <Storyboard x:Key="valentine_anim" x:Shared="False"
+                FillBehavior="Stop">
         <ColorAnimation Storyboard.TargetProperty="(Window.Background).(SolidColorBrush.Color)"
-                        To="#FFFFC0CB" Duration="0:0:0.5" AutoReverse="True" RepeatBehavior="4x"/>
-        <DoubleAnimation Storyboard.TargetProperty="Opacity"
-                         From="1" To="0.85" Duration="0:0:0.5" AutoReverse="True" RepeatBehavior="4x"/>
+                        To="#FFFFC0CB"
+                        Duration="0:0:0.5"
+                        AutoReverse="True"
+                        RepeatBehavior="4x"/>
     </Storyboard>
 
     <!-- ==========  8 БЕРЕЗНЯ  ========== -->
-    <Storyboard x:Key="flower_anim" x:Shared="False">
+    <Storyboard x:Key="flower_anim" x:Shared="False"
+                FillBehavior="Stop">
         <ColorAnimation Storyboard.TargetProperty="(Window.Background).(SolidColorBrush.Color)"
-                        From="#FFFFFFFF" To="#FFFFE4E1" Duration="0:0:0.6" AutoReverse="True" RepeatBehavior="3x"/>
-        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
-                         From="1" To="1.03" Duration="0:0:0.6" AutoReverse="True" RepeatBehavior="3x"/>
-        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
-                         From="1" To="1.03" Duration="0:0:0.6" AutoReverse="True" RepeatBehavior="3x"/>
+                        From="#FFFFFFFF" To="#FFFFE4E1"
+                        Duration="0:0:0.6"
+                        AutoReverse="True"
+                        RepeatBehavior="3x"/>
     </Storyboard>
 
     <!-- ==========  EARTH DAY  ========== -->
-    <Storyboard x:Key="earthday_anim" x:Shared="False">
+    <Storyboard x:Key="earthday_anim" x:Shared="False"
+                FillBehavior="Stop">
         <ColorAnimation Storyboard.TargetProperty="(Window.Background).(SolidColorBrush.Color)"
-                        To="#FF8FBC8F" Duration="0:0:1.0" AutoReverse="True" RepeatBehavior="2x"/>
-        <DoubleAnimation Storyboard.TargetProperty="Opacity"
-                         To="0.8" Duration="0:0:1.0" AutoReverse="True" RepeatBehavior="2x"/>
+                        To="#FF8FBC8F"
+                        Duration="0:0:1.0"
+                        AutoReverse="True"
+                        RepeatBehavior="2x"/>
     </Storyboard>
 
     <!-- ==========  HALLOWEEN  ========== -->
-    <Storyboard x:Key="halloween_anim" x:Shared="False">
+    <Storyboard x:Key="halloween_anim" x:Shared="False"
+                FillBehavior="Stop">
         <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Window.Background).(SolidColorBrush.Color)"
                                       Duration="0:0:1.2">
             <DiscreteColorKeyFrame KeyTime="0:0:0.0" Value="#FFFFA500"/>
-            <DiscreteColorKeyFrame KeyTime="0:0:0.3" Value="#FF000000"/>
-            <DiscreteColorKeyFrame KeyTime="0:0:0.6" Value="#FFFFA500"/>
-            <DiscreteColorKeyFrame KeyTime="0:0:0.9" Value="#FF000000"/>
-            <DiscreteColorKeyFrame KeyTime="0:0:1.2" Value="#FFFFFFFF"/>
+            <DiscreteColorKeyFrame KeyTime="0:0:0.4" Value="#FF000000"/>
+            <DiscreteColorKeyFrame KeyTime="0:0:0.8" Value="#FFFFA500"/>
+            <DiscreteColorKeyFrame KeyTime="0:0:1.2" Value="#FFFFA500"/>
         </ColorAnimationUsingKeyFrames>
-        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(TranslateTransform.X)"
-                         From="-3" To="3" Duration="0:0:0.05" AutoReverse="True" RepeatBehavior="24x"/>
     </Storyboard>
 
     <!-- ==========  CHRISTMAS  ========== -->
-    <Storyboard x:Key="christmas_anim" x:Shared="False">
+    <Storyboard x:Key="christmas_anim" x:Shared="False"
+                FillBehavior="Stop">
         <ColorAnimation Storyboard.TargetProperty="(Window.Background).(SolidColorBrush.Color)"
-                        To="#FFF0F8FF" Duration="0:0:0.8" AutoReverse="True" RepeatBehavior="Forever"/>
-        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleX)"
-                         From="1" To="1.02" Duration="0:0:0.8" AutoReverse="True" RepeatBehavior="Forever"/>
-        <DoubleAnimation Storyboard.TargetProperty="(UIElement.RenderTransform).(ScaleTransform.ScaleY)"
-                         From="1" To="1.02" Duration="0:0:0.8" AutoReverse="True" RepeatBehavior="Forever"/>
+                        To="#FFF0F8FF"
+                        Duration="0:0:0.8"
+                        AutoReverse="True"
+                        RepeatBehavior="1x"/>
     </Storyboard>
+
+    <!-- ==========  BIRTHDAY CELEBRATION  ========== -->
+    <Storyboard x:Key="birthday_anim" x:Shared="False"
+                FillBehavior="Stop">
+        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Window.Background).(SolidColorBrush.Color)"
+                                      Duration="0:0:3">
+            <DiscreteColorKeyFrame KeyTime="0:0:0.0" Value="#FFFFEB3B"/>
+            <DiscreteColorKeyFrame KeyTime="0:0:1.0" Value="#FF4CAF50"/>
+            <DiscreteColorKeyFrame KeyTime="0:0:2.0" Value="#FF2196F3"/>
+            <DiscreteColorKeyFrame KeyTime="0:0:3.0" Value="#FFFFEB3B"/>
+        </ColorAnimationUsingKeyFrames>
+    </Storyboard>
+
+    <!-- ==========  ANNIVERSARY  ========== -->
+    <Storyboard x:Key="anniversary_anim" x:Shared="False"
+                FillBehavior="Stop">
+        <ColorAnimation Storyboard.TargetProperty="(Window.Background).(SolidColorBrush.Color)"
+                        From="#FFFFFFFF"
+                        To="#FFD81B60"
+                        Duration="0:0:1.5"
+                        AutoReverse="True"
+                        RepeatBehavior="1x"/>
+    </Storyboard>
+
 </ResourceDictionary>

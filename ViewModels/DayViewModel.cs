@@ -15,9 +15,11 @@ namespace CursovaRobota.ViewModels
             Date = date;
             IsCurrentMonth = isCurrentMonth;
             CalendarItems = CalendarRepository
-                           .GetItemsForDate(date).ToList();
+                           .GetItemsForDate(date)
+                           .ToList();
 
-  
+
+
             OnPropertyChanged(nameof(HasItems));
         }
 
@@ -48,27 +50,49 @@ namespace CursovaRobota.ViewModels
         // ---------- API ----------
         public int TriggerItems()
         {
+            int removedCount = 0;
 
+            // 1) Події
             var toDelete = CalendarItems
                 .OfType<Event>()
                 .Where(evt => NotificationService.Instance.ShowMessage(evt))
                 .ToList();
 
-
             foreach (var evt in toDelete)
             {
-                CalendarRepository.DeleteUserEvent(evt);
+                CalendarRepository.DeleteUserEvent(evt.Id);
                 CalendarItems.Remove(evt);
+                removedCount++;
             }
 
-
-            foreach (var holiday in CalendarItems.OfType<Holiday>())
+            // 2) Свята
+            foreach (var holiday in CalendarItems.OfType<Holiday>().ToList())
+            {
+                // програємо анімацію
                 holiday.Trigger();
 
-            OnPropertyChanged(nameof(HasItems));
+                // показуємо діалог (без логіки видалення)
+                NotificationService.Instance.ShowMessage(holiday);
 
-            return toDelete.Count;
+                // якщо його видалили вручну в діалозі
+                bool stillExists = CalendarRepository
+                    .GetHolidays()
+                    .Any(h => h.Id == holiday.Id);
+
+                if (!stillExists)
+                {
+                    CalendarRepository.DeleteHoliday(holiday.Id);
+                    CalendarItems.Remove(holiday);
+                    removedCount++;
+                }
+            }
+
+            // повідомити UI про зміну dot
+            OnPropertyChanged(nameof(HasItems));
+            return removedCount;
         }
+
+
 
 
 

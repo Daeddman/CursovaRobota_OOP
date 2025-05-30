@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\oleks\Desktop\CursovaRobota\App.xaml
-7-1948486429
+8-222755967
 
-22-1596173320
-27-1893390715
-Controls\CalendarControl.xaml;MainWindow.xaml;Resources\HolidayAnimations.xaml;Views\EventDialog.xaml;Views\HoldiayDialog.xaml;Views\NotificationDialog.xaml;Views\WindowInputDialog.xaml;
+29-1458036452
+28-1424609297
+Controls\CalendarControl.xaml;MainWindow.xaml;Resources\HolidayAnimations.xaml;Views\DatePickerDialog.xaml;Views\EventDialog.xaml;Views\HoldiayDialog.xaml;Views\NotificationDialog.xaml;Views\WindowInputDialog.xaml;
 
-True
+False
 

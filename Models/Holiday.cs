@@ -3,32 +3,29 @@ using System.Text.Json.Serialization;
 using System.Windows;
 using System.Windows.Media.Animation;
 using CursovaRobota.Models;
+using CursovaRobota.Services;
 using CursovaRobota.Views;
 
 namespace CursovaRobota.Models
 {
     public class Holiday : CalendarItem
     {
-        [JsonPropertyName("id")]
-        public Guid Id { get; set; } = Guid.NewGuid();
-
+        // CalendarItem уже має Id, Start, End → тут не потрібні
         public string Title { get; set; }
-        public string Description { get; set; }    
+        public string Description { get; set; }
         public string AnimationKey { get; set; }
+
+
+        /// <summary>Свято відбувається щороку в цю ж дату.</summary>
+        public int Month => Start.Month;
+        public int Day => Start.Day;
+
+        public override string DisplayName => Title;
 
         public override void Trigger()
         {
-            if (Application.Current?.MainWindow is FrameworkElement wnd &&
-                !string.IsNullOrEmpty(AnimationKey) &&
-                wnd.TryFindResource(AnimationKey) is Storyboard sb)
-            {
-                sb.Begin(wnd);
-            }
-            var dlg = new HolidayDialog(this)
-            {
-                Owner = Application.Current.MainWindow
-            };
-            dlg.ShowDialog();
+            Helpers.AnimationManager.Play(AnimationKey);
         }
+
     }
 }

@@ -1,44 +1,146 @@
 [
   {
-    "id": "00000000-0000-0000-0000-000000000001",
-    "title": "Новий рік",
-    "description": "Святкування початку нового року з феєрверками та сімейними традиціями",
-    "date": "2025-01-01",
-    "animationKey": "newyear_anim"
+    "Title": "Міжнародний жіночий день",
+    "Description": "",
+    "AnimationKey": "flower_anim",
+    "Month": 3,
+    "Day": 8,
+    "DisplayName": "Міжнародний жіночий день",
+    "Id": "4c942d9e-2f15-433a-8675-976d7fd6d69c",
+    "Start": "2025-03-08T09:00:00",
+    "End": "2025-03-08T19:00:00",
+    "Rule": {
+      "Freq": 4,
+      "Interval": 1,
+      "DaysOfWeek": null,
+      "Count": null,
+      "Until": null
+    }
   },
   {
-    "id": "00000000-0000-0000-0000-000000000002",
-    "title": "День Святого Валентина",
-    "description": "Свято закоханих — обмін валентинками і солодощами",
-    "date": "2025-02-14",
-    "animationKey": "valentine_anim"
+    "Title": "День закоханих",
+    "Description": "",
+    "AnimationKey": "valentine_anim",
+    "Month": 2,
+    "Day": 14,
+    "DisplayName": "День закоханих",
+    "Id": "1cc8d73f-42fd-409d-845d-d67a271f42be",
+    "Start": "2025-02-14T09:00:00",
+    "End": "2025-02-14T19:00:00",
+    "Rule": {
+      "Freq": 4,
+      "Interval": 1,
+      "DaysOfWeek": null,
+      "Count": null,
+      "Until": null
+    }
   },
   {
-    "id": "00000000-0000-0000-0000-000000000003",
-    "title": "Міжнародний жіночий день",
-    "description": "Привітання жінок і шанування їхніх досягнень",
-    "date": "2025-03-08",
-    "animationKey": "flower_anim"
+    "Title": "День Землі",
+    "Description": "",
+    "AnimationKey": "earthday_anim",
+    "Month": 4,
+    "Day": 22,
+    "DisplayName": "День Землі",
+    "Id": "24466922-541b-4244-86ae-2ac2af657f3a",
+    "Start": "2025-04-22T09:00:00",
+    "End": "2025-04-22T19:00:00",
+    "Rule": {
+      "Freq": 4,
+      "Interval": 1,
+      "DaysOfWeek": null,
+      "Count": null,
+      "Until": null
+    }
   },
   {
-    "id": "00000000-0000-0000-0000-000000000004",
-    "title": "День Землі",
-    "description": "Всесвітня акція на підтримку навколишнього середовища",
-    "date": "2025-04-22",
-    "animationKey": "earthday_anim"
+    "Title": "Новий Рік",
+    "Description": "",
+    "AnimationKey": "newyear_anim",
+    "Month": 1,
+    "Day": 31,
+    "DisplayName": "Новий Рік",
+    "Id": "3ab43de6-acbc-43d4-aa20-066f0a89578a",
+    "Start": "2025-01-31T09:00:00",
+    "End": "2025-01-31T19:00:00",
+    "Rule": {
+      "Freq": 4,
+      "Interval": 1,
+      "DaysOfWeek": null,
+      "Count": null,
+      "Until": null
+    }
   },
   {
-    "id": "00000000-0000-0000-0000-000000000005",
-    "title": "Halloween",
-    "description": "Кельтське свято з костюмами та солодощами",
-    "date": "2025-10-31",
-    "animationKey": "halloween_anim"
+    "Title": "Різдво",
+    "Description": "",
+    "AnimationKey": "christmas_anim",
+    "Month": 12,
+    "Day": 25,
+    "DisplayName": "Різдво",
+    "Id": "8307d718-eaa0-4cbc-9b71-bd603e1f9ca7",
+    "Start": "2024-12-25T09:00:00",
+    "End": "2024-12-25T19:00:00",
+    "Rule": {
+      "Freq": 4,
+      "Interval": 1,
+      "DaysOfWeek": null,
+      "Count": null,
+      "Until": null
+    }
   },
   {
-    "id": "00000000-0000-0000-0000-000000000006",
-    "title": "Різдво",
-    "description": "Релігійне свято народження Ісуса Христа та сімейних зустрічей",
-    "date": "2025-12-25",
-    "animationKey": "christmas_anim"
+    "Title": "Гелловін",
+    "Description": "",
+    "AnimationKey": "halloween_anim",
+    "Month": 10,
+    "Day": 31,
+    "DisplayName": "Гелловін",
+    "Id": "fee032fc-5f12-4d14-a228-621a70b81bcc",
+    "Start": "2024-10-31T09:00:00",
+    "End": "2024-10-31T19:00:00",
+    "Rule": {
+      "Freq": 4,
+      "Interval": 1,
+      "DaysOfWeek": null,
+      "Count": null,
+      "Until": null
+    }
+  },
+  {
+    "Title": "День народження",
+    "Description": "Мій день",
+    "AnimationKey": "birthday_anim",
+    "Month": 3,
+    "Day": 31,
+    "DisplayName": "День народження",
+    "Id": "1eb07341-69a3-4938-a380-e12b4585a9d8",
+    "Start": "2025-03-31T09:00:00",
+    "End": "2025-03-31T19:00:00",
+    "Rule": {
+      "Freq": 4,
+      "Interval": 1,
+      "DaysOfWeek": null,
+      "Count": null,
+      "Until": null
+    }
+  },
+  {
+    "Title": "123",
+    "Description": "",
+    "AnimationKey": "anniversary_anim",
+    "Month": 5,
+    "Day": 8,
+    "DisplayName": "123",
+    "Id": "d538ff9d-9e2a-47f7-8c40-76548401d744",
+    "Start": "2025-05-08T09:00:00",
+    "End": "2025-05-08T19:00:00",
+    "Rule": {
+      "Freq": 4,
+      "Interval": 1,
+      "DaysOfWeek": null,
+      "Count": null,
+      "Until": null
+    }
   }
 ]
